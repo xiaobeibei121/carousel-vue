@@ -10,6 +10,25 @@ npm install
 npm run dev
 ```
 
+#### 使用方式
+
+* 导入
+```
+import Carousel from 'b-carousel';
+Vue.use(Carousel);
+```
+
+* 组件使用
+```vue2html
+<b-carousel :defaultIndex="3">
+   <b-carousel-item><img src="./assets/images/0.png"></b-carousel-item>
+   <b-carousel-item><img src="./assets/images/1.png"></b-carousel-item>
+   <b-carousel-item><img src="./assets/images/2.png"></b-carousel-item>
+   <b-carousel-item><img src="./assets/images/3.png"></b-carousel-item>
+   <b-carousel-item><img src="./assets/images/4.png"></b-carousel-item>
+</b-carousel>
+```
+
 #### 参数说明
 
 speed：轮播的速度，默认 300ms
