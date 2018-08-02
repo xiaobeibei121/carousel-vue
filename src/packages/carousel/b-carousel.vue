@@ -3,6 +3,9 @@
     <ul>
       <slot></slot>
     </ul>
+    <div class="indicator" v-if="showIndicators">
+      <span :class="index==now?'active':''" v-for="(item,index) in lis"></span>
+    </div>
   </div>
 </template>
 <script>
@@ -189,6 +192,7 @@
 
 <style lang="scss">
   .carousel-div {
+    position: relative;
     width: 100%;
     max-width: 750px;
     margin: 0 auto;
@@ -204,6 +208,24 @@
         width: 100%;
         img{
           width: 100%;
+        }
+      }
+    }
+    .indicator{
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      text-align: center;
+      font-size: 0;
+      >span{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 0 4px;
+        border-radius: 50%;
+        background-color: rgba(255,255,255,0.8);
+        &.active{
+          background-color: rgba(200,200,200,0.8);
         }
       }
     }
