@@ -54,7 +54,7 @@
       init () {
         // 初始化
         this.touchDoc = document.querySelector('#' + this.docmID);
-        this.lis = document.querySelectorAll('#' + this.docmID +' li');
+        this.lis = [...document.querySelectorAll('#' + this.docmID +' li')];
         this.lisLength = this.lis.length;
         this.now = this.defaultIndex;
         this.pre = this.defaultIndex === 0 ? this.lisLength - 1: this.defaultIndex - 1;
